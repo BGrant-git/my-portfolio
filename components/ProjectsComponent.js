@@ -74,6 +74,11 @@ const ProjectsComponent = () => {
 									<ItemLink href={item.url} alt="">
 										{item.url}
 									</ItemLink>
+									<br />
+									Repo:{' '}
+									<ItemLink href={item.repo} alt="">
+										{item.repo}
+									</ItemLink>
 								</p>
 							</ItemContainer>
 						</Grid>

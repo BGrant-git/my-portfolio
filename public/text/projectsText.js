@@ -8,6 +8,7 @@ const projectsData = [
 
 			"	They didn't want the layout for their site to follow any sort of templates, so the design was a fluid process, and developing the site with GatsbyJS was ideal as I felt that I could build on the knowledge and confidence I gained from my own Gatsby shop project. I was sure I could deliver to them a functional and accessible site, and the site makes use of graphql, styled-components, global contexts, Google (and soon Shopify) API, Github, custom DNS records and more.",
 		],
+		repo: 'https://github.com/BGrant-git/flavour-culture',
 	},
 
 	{
@@ -19,6 +20,7 @@ const projectsData = [
 
 			"As well as getting very comfortable with this JavaScript framework, I also learned how to use the Shopify CMS to provide mock items for the shop, graphql to retrieve them, React's global context to display them, and Netlify/Github to host it.",
 		],
+		repo: 'https://github.com/BGrant-git/gatsby-shop',
 	},
 ]
 

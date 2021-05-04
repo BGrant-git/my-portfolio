@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import ProfileComponent from '../components/ProfileComponent'
 import ProjectsComponent from '../components/ProjectsComponent'
 import ToolsComponent from '../components/ToolsComponent'
+import ContactComponent from '../components/ContactComponent'
 
 const Home = () => {
 	const motionVariants = {
@@ -45,9 +46,8 @@ const Home = () => {
 				>
 					<ProjectsComponent />
 				</motion.div>
-				<div>
-					<ToolsComponent />
-				</div>
+				<ToolsComponent />
+				<ContactComponent />
 			</div>
 		</>
 	)
