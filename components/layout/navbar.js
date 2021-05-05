@@ -14,15 +14,18 @@ const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	z-index: 1;
 `
 
 const Title = styled.h1`
 	margin-left: 40px;
+	min-width: 200px;
 `
 
 const NavBar = () => {
 	const { navLinks } = useContext(StoreContext)
-	const matches = useMediaQuery('(max-width: 768px)')
+	const matches = useMediaQuery('(max-width: 690px)')
 
 	return (
 		<Container>

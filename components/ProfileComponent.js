@@ -6,7 +6,8 @@ import ReactTypingEffect from 'react-typing-effect'
 import bioText from '../public/text/bioText'
 
 const RootContainer = styled.div`
-	margin: 20px 0;
+	margin: 0 0 20px;
+	padding-top: 100px;
 `
 
 const ContentContainer = styled.div`
@@ -28,6 +29,7 @@ const ImgContainer = styled(Card)`
 	justify-content: flex-end;
 	align-items: flex-start;
 	margin-bottom: 20px;
+	filter: brightness(1.1);
 
 	@media (max-width: 960px) {
 		justify-content: center;
@@ -36,10 +38,9 @@ const ImgContainer = styled(Card)`
 	}
 `
 
-const BioContainer = styled(Card)`
+const BioContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	background-color: #f8f8ff;
 	margin: 0 0 0 20px;
 	padding: 0 20px 20px;
 
@@ -103,7 +104,7 @@ const ProfileComponent = () => {
 								</ImgContainer>
 							</Grid>
 							<Grid item xs={12} md={7}>
-								<BioContainer square>
+								<BioContainer>
 									<h2>{bioText[0].header}</h2>
 									{bioText[0].text.map((item, i) => (
 										<p key={i}>{item}</p>
@@ -140,10 +141,21 @@ const ProfileComponent = () => {
 														typingDelay={250}
 													/>
 												</ListItem>
+												<ListItem>
+													<strong>Links:</strong>{' '}
+													{bioText[0].links.map((item, i) => (
+														<a href={item[1]} key={i}>
+															{item[0]}{' '}
+														</a>
+													))}
+												</ListItem>
 											</UList>
 										</Grid>
 									</Grid>
-									<a href="#" style={{ width: '220px' }}>
+									<a
+										href="mailto:bengrant.home@gmail.com"
+										style={{ width: '220px', textDecoration: 'none' }}
+									>
 										<MessageButton variant="contained">
 											SEND ME A MESSAGE
 										</MessageButton>

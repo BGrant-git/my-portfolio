@@ -7,6 +7,9 @@ import projectsData from '../public/text/projectsText'
 const Container = styled.div`
 	max-width: 1200px;
 	margin: auto;
+
+	padding-top: 95px;
+	margin-top: -95px;
 `
 
 const Title = styled.h1`
@@ -14,7 +17,7 @@ const Title = styled.h1`
 	font-size: 50px;
 `
 
-const ItemContainer = styled(Card)`
+const ItemContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin: 0 10px 20px;
@@ -24,7 +27,7 @@ const ImgContainer = styled.div`
 	margin: auto;
 `
 
-const ItemTitleLink = styled.a`
+const ItemTitle = styled.div`
 	text-align: center;
 	color: white;
 	background-color: black;
@@ -37,11 +40,6 @@ const Text = styled.p`
 	padding: 0 20px;
 `
 
-const ItemLink = styled.a`
-	text-decoration: underline;
-	color: purple;
-`
-
 const ProjectsComponent = () => {
 	return (
 		<Container>
@@ -51,19 +49,17 @@ const ProjectsComponent = () => {
 					<Grid item xs={false} md={1} />
 					{projectsData.map((item, i) => (
 						<Grid item xs={12} md={5} key={i}>
-							<ItemContainer square>
-								<ItemTitleLink href={item.url}>
+							<ItemContainer>
+								<ItemTitle>
 									<h1>{item.title}</h1>
-								</ItemTitleLink>
+								</ItemTitle>
 								<ImgContainer>
-									<a href={item.url} alt="">
-										<Image
-											src="/images/square.jpg"
-											alt=""
-											height={200}
-											width={200}
-										/>
-									</a>
+									<Image
+										src={item.image}
+										alt=""
+										height={200}
+										width={200}
+									/>
 								</ImgContainer>
 								{item.description.map((item, i) => (
 									<Text key={i}>{item}</Text>
@@ -71,14 +67,14 @@ const ProjectsComponent = () => {
 
 								<p style={{ paddingLeft: '20px' }}>
 									URL:{' '}
-									<ItemLink href={item.url} alt="">
+									<a href={item.url} alt="">
 										{item.url}
-									</ItemLink>
+									</a>
 									<br />
 									Repo:{' '}
-									<ItemLink href={item.repo} alt="">
+									<a href={item.repo} alt="">
 										{item.repo}
-									</ItemLink>
+									</a>
 								</p>
 							</ItemContainer>
 						</Grid>

@@ -23,7 +23,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
 	text-align: center;
-	font-size: 50px;
+	font-size: 46px;
 `
 
 const Img = styled.img`
@@ -34,7 +34,7 @@ const ToolsComponent = () => {
 	return (
 		<Container>
 			<Card square>
-				<Title>Tools I use</Title>
+				<Title>Some Of The Tools I use</Title>
 				<Grid
 					container
 					item
@@ -45,7 +45,7 @@ const ToolsComponent = () => {
 					style={{ padding: '0 20px' }}
 				>
 					{images.map((item, i) => (
-						<Grid item xs={4} sm={3} key={i}>
+						<Grid item xs={4} sm={3} key={i} style={{ padding: '0 3%' }}>
 							<Img src={item} />
 						</Grid>
 					))}

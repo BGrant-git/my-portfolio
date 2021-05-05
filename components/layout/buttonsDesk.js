@@ -5,12 +5,7 @@ import { Button } from '@material-ui/core'
 const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 400px;
 	margin-right: 20px;
-`
-
-const NavButton = styled(Button)`
-	height: 40px;
 `
 
 const ButtonText = styled.p`
@@ -23,9 +18,16 @@ const ButtonsDesk = ({ navLinks }) => {
 		<Container>
 			{navLinks[0].map((item, i) => (
 				<Link href={item[1]} key={i}>
-					<NavButton variant="contained" style={{ background: 'white' }}>
+					<Button
+						variant="contained"
+						style={{
+							background: 'white',
+							margin: ' 0 5px',
+							height: '40px',
+						}}
+					>
 						<ButtonText>{item[0]}</ButtonText>
-					</NavButton>
+					</Button>
 				</Link>
 			))}
 		</Container>

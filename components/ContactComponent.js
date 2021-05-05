@@ -22,42 +22,50 @@ const ContactComponent = () => {
 	const messageBoxStyle = {
 		margin: '0 auto 20px',
 		fontSize: '18px',
+		backgroundColor: 'black',
+		color: 'white',
 	}
 
 	return (
 		<Container>
 			<Card square>
 				<Title>Contact Me</Title>
-				<form>
+				<form
+					action="https://getform.io/f/0c275e41-f65d-45d1-9386-a63e444f1be4"
+					method="POST"
+				>
 					<TextContainer>
 						<Grid container>
 							<Grid item xs={12} md={6} style={paddingVal}>
 								<TextField
-									id="name"
 									label="Name"
+									type="text"
+									name="name"
 									variant="outlined"
 									style={widthVal}
 								/>
 							</Grid>
 							<Grid item xs={12} md={6} style={paddingVal}>
 								<TextField
-									id="Email"
 									label="Email"
+									type="email"
+									name="email"
 									variant="outlined"
 									style={widthVal}
 								/>
 							</Grid>
 							<Grid item xs={12} style={paddingVal}>
 								<TextField
-									id="message"
 									label="Message"
+									type="text"
+									name="message"
 									variant="outlined"
 									multiline
 									rows={4}
 									style={widthVal}
 								/>
 							</Grid>
-							<Button variant="contained" style={messageBoxStyle}>
+							<Button variant="contained" type="submit" style={messageBoxStyle}>
 								submit
 							</Button>
 						</Grid>

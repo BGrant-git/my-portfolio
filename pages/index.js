@@ -36,6 +36,7 @@ const Home = () => {
 					initial="hidden"
 					animate="visible"
 					variants={motionVariants}
+					name="about"
 				>
 					<ProfileComponent />
 				</motion.div>
@@ -43,11 +44,14 @@ const Home = () => {
 					initial="hidden"
 					animate="visible"
 					variants={motionVariants}
+					name="projects"
 				>
 					<ProjectsComponent />
 				</motion.div>
 				<ToolsComponent />
-				<ContactComponent />
+				<div name="contact">
+					<ContactComponent />
+				</div>
 			</div>
 		</>
 	)

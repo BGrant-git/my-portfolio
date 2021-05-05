@@ -2,7 +2,7 @@ const projectsData = [
 	{
 		title: 'Flavour Culture',
 		url: 'https://www.flavourculture.co.uk',
-		image: `../public/images/square.jpg`,
+		image: `/images/flavour-desk.jpg`,
 		description: [
 			"Once I was more confident in my web dev skills I got in contact with a catering start-up company about establishing their online identity. While they had their social media's all set up, I knew they would profit from their own website and I saw this as a great opportunity to apply my new learned abilities to a real-life and professional use case. ",
 
@@ -14,7 +14,7 @@ const projectsData = [
 	{
 		title: 'Gatsby Practise Shop',
 		url: 'https://loving-rosalind-539932.netlify.app/',
-		image: `../public/images/square.jpg`,
+		image: `/images/gatsby-shop-desk.jpg`,
 		description: [
 			'This GatsbyJS project was my first time applying all of the web developing skills I had learned into a ReactJS project. I decided to make a clothes shop as it would present opportunities to apply learned skills and learn some new. Initially, I started to code the app using create-react-app, but an experiended dev friend of mine recommended to use a framework like Gatsby, advice I took. ',
 

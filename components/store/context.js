@@ -6,15 +6,15 @@ const StoreContextProvider = ({ children }) => {
 	const [navLinks] = useState([
 		{
 			0: 'About Me',
-			1: '#',
+			1: '/#about',
 		},
 		{
 			0: 'Projects',
-			1: '#',
+			1: '/#projects',
 		},
 		{
 			0: 'Contact',
-			1: '#',
+			1: '/#contact',
 		},
 	])
 
