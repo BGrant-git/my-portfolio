@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Grid, useMediaQuery, Card } from '@material-ui/core'
 import Image from 'next/image'
 import ReactTypingEffect from 'react-typing-effect'
+import CallIcon from '@material-ui/icons/Call'
 
 import bioText from '../public/text/bioText'
 
@@ -59,6 +60,24 @@ const UList = styled.ul`
 
 const ListItem = styled.li`
 	padding: 5px 0;
+`
+
+const ButtonContainer = styled.div`
+	display: flex;
+
+	@media (max-width: 690px) {
+		flex-direction: column;
+	}
+`
+
+const ButtonLinks = styled.a`
+	width: 220px;
+	margin-right: 10px;
+	text-decoration: none;
+
+	@media (max-width: 690px) {
+		margin: auto;
+	}
 `
 
 const MessageButton = styled.div`
@@ -152,14 +171,24 @@ const ProfileComponent = () => {
 											</UList>
 										</Grid>
 									</Grid>
-									<a
-										href="mailto:bengrant.home@gmail.com"
-										style={{ width: '220px', textDecoration: 'none' }}
-									>
-										<MessageButton variant="contained">
-											SEND ME A MESSAGE
-										</MessageButton>
-									</a>
+									<ButtonContainer>
+										<ButtonLinks href="mailto:bengrant.home@gmail.com">
+											<MessageButton variant="contained">
+												SEND ME A MESSAGE
+											</MessageButton>
+										</ButtonLinks>
+										<ButtonLinks href="tel:07949524345">
+											<MessageButton
+												variant="contained"
+												style={{
+													display: 'flex',
+													justifyContent: 'center',
+												}}
+											>
+												<CallIcon style={{ margin: '0 5px 0 -5px' }} /> CALL ME
+											</MessageButton>
+										</ButtonLinks>
+									</ButtonContainer>
 								</BioContainer>
 							</Grid>
 						</Grid>
