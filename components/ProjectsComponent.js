@@ -25,6 +25,8 @@ const ItemContainer = styled.div`
 
 const ImgContainer = styled.div`
 	margin: auto;
+	background-color: #303030;
+	padding: 7px;
 `
 
 const ItemTitle = styled.div`
@@ -54,12 +56,7 @@ const ProjectsComponent = () => {
 									<h1>{item.title}</h1>
 								</ItemTitle>
 								<ImgContainer>
-									<Image
-										src={item.image}
-										alt=""
-										height={200}
-										width={200}
-									/>
+									<Image src={item.image} alt="" height={200} width={200} />
 								</ImgContainer>
 								{item.description.map((item, i) => (
 									<Text key={i}>{item}</Text>
