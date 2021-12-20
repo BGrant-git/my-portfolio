@@ -1,3 +1,5 @@
+import ReCAPTCHA from 'react-google-recaptcha'
+import { createRef, useState } from 'react'
 import styled from 'styled-components'
 import { Grid, Card, TextField, Button } from '@material-ui/core'
 
@@ -16,14 +18,39 @@ const TextContainer = styled.div`
 	margin: auto;
 `
 
+const SubmitContainer = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`
+
+const ButtonContainer = styled.div`
+	margin: 15px auto 20px;
+
+	p {
+		font-size: 18px;
+		margin: 0;
+	}
+`
+
 const ContactComponent = () => {
+	const recaptchaRef = createRef()
+	const [isVerified, setIsVerified] = useState(false)
+
+	const handleReCAPTCHAChange = () => {
+		setIsVerified(true)
+	}
+
 	const paddingVal = { padding: '20px' }
 	const widthVal = { width: '100%' }
-	const messageBoxStyle = {
-		margin: '0 auto 20px',
-		fontSize: '18px',
+	const buttonStyle = {
 		backgroundColor: 'black',
 		color: 'white',
+	}
+	const disabledButtonStyle = {
+		backgroundColor: '#808080',
 	}
 
 	return (
@@ -65,9 +92,24 @@ const ContactComponent = () => {
 									style={widthVal}
 								/>
 							</Grid>
-							<Button variant="contained" type="submit" style={messageBoxStyle}>
-								submit
-							</Button>
+							<SubmitContainer>
+								<ReCAPTCHA
+									ref={recaptchaRef}
+									size="normal"
+									sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+									onChange={handleReCAPTCHAChange}
+								/>
+								<ButtonContainer>
+									<Button
+										variant="contained"
+										type="submit"
+										style={isVerified ? buttonStyle : disabledButtonStyle}
+										disabled={!isVerified}
+									>
+										<p>submit</p>
+									</Button>
+								</ButtonContainer>
+							</SubmitContainer>
 						</Grid>
 					</TextContainer>
 				</form>

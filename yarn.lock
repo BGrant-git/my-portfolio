@@ -596,9 +596,9 @@ camelize@^1.0.0:
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
 caniuse-lite@^1.0.30001173, caniuse-lite@^1.0.30001179:
-  version "1.0.30001192"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001192.tgz#b848ebc0ab230cf313d194a4775a30155d50ae40"
-  integrity sha512-63OrUnwJj5T1rUmoyqYTdRWBqFFxZFlyZnRRjDR8NSUQFB6A+j/uBORU/SyJ5WzDLg4SPiZH40hQCBNdZ/jmAw==
+  version "1.0.30001291"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001291.tgz"
+  integrity sha512-roMV5V0HNGgJ88s42eE70sstqGW/gwFndosYrikHthw98N5tLnOTxFqMLQjZVRxTWFlJ4rn+MsgXrR7MDPY4jA==
 
 chalk@2.4.2, chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -1128,7 +1128,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -1784,7 +1784,7 @@ process@0.11.10, process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
-prop-types@15.7.2, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -1878,6 +1878,14 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-async-script@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-async-script/-/react-async-script-1.2.0.tgz#ab9412a26f0b83f5e2e00de1d2befc9400834b21"
+  integrity sha512-bCpkbm9JiAuMGhkqoAiC0lLkb40DJ0HOEJIku+9JDjxX3Rcs+ztEOG13wbrOskt3n2DTrjshhaQ/iay+SnGg5Q==
+  dependencies:
+    hoist-non-react-statics "^3.3.0"
+    prop-types "^15.5.0"
+
 react-dom@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
@@ -1896,6 +1904,14 @@ react-dom@^16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-google-recaptcha@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-2.1.0.tgz#9f6f4954ce49c1dedabc2c532347321d892d0a16"
+  integrity sha512-K9jr7e0CWFigi8KxC3WPvNqZZ47df2RrMAta6KmRoE4RUi7Ys6NmNjytpXpg4HI/svmQJLKR+PncEPaNJ98DqQ==
+  dependencies:
+    prop-types "^15.5.0"
+    react-async-script "^1.1.1"
 
 react-is@16.13.1, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"

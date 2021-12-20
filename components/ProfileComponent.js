@@ -93,11 +93,6 @@ const MessageButton = styled.div`
 	margin: 10px 0 0;
 	transition: ease-out 0.3s;
 	box-shadow: inset 0 0 0 0 black;
-
-	&:hover {
-		box-shadow: inset 220px 0 0 0 lightgrey;
-		color: black;
-	}
 `
 
 const interests = bioText[0].interests
