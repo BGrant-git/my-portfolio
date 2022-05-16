@@ -70,6 +70,7 @@ const ContactComponent = () => {
 									name="name"
 									variant="outlined"
 									style={widthVal}
+									disabled
 								/>
 							</Grid>
 							<Grid item xs={12} md={6} style={paddingVal}>
@@ -79,6 +80,7 @@ const ContactComponent = () => {
 									name="email"
 									variant="outlined"
 									style={widthVal}
+									disabled
 								/>
 							</Grid>
 							<Grid item xs={12} style={paddingVal}>
@@ -90,6 +92,7 @@ const ContactComponent = () => {
 									multiline
 									rows={4}
 									style={widthVal}
+									disabled
 								/>
 							</Grid>
 							<SubmitContainer>
